@@ -2,8 +2,7 @@ package by.bsu.selenium.constant;
 
 
 public final class ElementXPath {
-    public static final String SIGN_IN_BUTTON = "//button[@type='submit']";
-    //*[@id="root"]/div/div[2]/div[1]/div[2]/div/div[2]/div/div/form/div[4]/button[1]
+    public static final String BUTTON = "//button[@type='submit']";
 
     public static final String ERROR_SIGN_IN_MESSAGE = "//*[@id=\"root\"]/div/div[2]/div[1]/div[1]";
 
@@ -19,6 +18,18 @@ public final class ElementXPath {
     public static final String FAVORITES_COLLECTIONS = "//div[contains(@class, 'collections')]/div[1]/a[2]";
     public static final String FAVORITES_POSTERS = "//div[contains(@class, 'afisha')]/div[1]/a[2]";
     public static final String FAVORITES_MARKET = "//div[contains(@class, 'market')]/div[1]/a[2]";
+
+    public static final String MY_POSTERS = "//div[contains(@class, 'afisha-card__item')]";
+    public static final String MY_POSTERS_NAME = "//div[contains(@class, 'afisha-card__title')]/a";
+
+
+    public static final String POSTERS_ON_PAGE = "//div[contains(@class, 'events-feed content-rubric-selections__events')]/div[2]";
+    public static final String POSTER = "//div[contains(@class, 'events-list__item')]";
+    public static final String POSTER_TITLE = "//h2[contains(@class,'event__name')]";
+    public static final String BOOKMARK = "//span[contains(@class, 'bookmark')]";
+    public static final String BOOKMARK_ACTIVE = "//span[contains(@class, 'bookmark_active_yes')]";
+
+
 
     private ElementXPath(){}
 }

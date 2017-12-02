@@ -27,5 +27,10 @@ public class PassportAction extends AbstractAction{
                 passportFavoritePage.getMarket().isDisplayed();
     }
 
+    public void goToPostersPage(){
+        PassportFavoritePage passportFavoritePage = new PassportFavoritePage(webDriver);
+        passportFavoritePage.goToPostersPage();
+    }
+
 
 }

@@ -4,12 +4,15 @@ import by.bsu.selenium.constant.ElementXPath;
 import by.bsu.selenium.constant.LogMessage;
 import by.bsu.selenium.constant.PageURL;
 import by.bsu.selenium.page.AbstractPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class PassportFavoritePage extends AbstractPage {
     private final Logger LOGGER = LogManager.getLogger(PassportFavoritePage.class);
@@ -54,7 +57,20 @@ public class PassportFavoritePage extends AbstractPage {
         return posters;
     }
 
+    public List<WebElement> getPostersList(){
+        By myPosters = new By.ByXPath(ElementXPath.MY_POSTERS);
+        LOGGER.info(LogMessage.GETTING_POSTERS_FROM_FAVORITES);
+        return posters.findElements(myPosters);
+    }
+
+    public void goToPostersPage(){
+        posters.click();
+        LOGGER.info(LogMessage.POSTERS_GO_TO_PAGE);
+    }
+
     public WebElement getMarket() {
         return market;
     }
+
+
 }

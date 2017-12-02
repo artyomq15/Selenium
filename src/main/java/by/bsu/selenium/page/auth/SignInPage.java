@@ -21,7 +21,7 @@ public class SignInPage extends AbstractPage {
     @FindBy(name = ElementName.PASSWORD)
     private WebElement inputPassword;
 
-    @FindBy(xpath = ElementXPath.SIGN_IN_BUTTON)
+    @FindBy(xpath = ElementXPath.BUTTON)
     private WebElement buttonSignIn;
 
     @FindBy(xpath = ElementXPath.ERROR_SIGN_IN_MESSAGE)
